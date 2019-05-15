@@ -1,26 +1,60 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css';
+import NavBar from './components/NavBar';
+import Cards from './components/Cards';
+import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import ResponsiveDrawer from './components/ResponsiveDrawer'
+// import LongMenu from './components/LongMenu';
+import { Provider } from "react-redux";
+import  store  from "./store";
+import Home from "./store/Home";
+import GridImage from './components/GridImage';
+
+class App extends Component{
+  render(){
+    
+return (
+   //  <React.Fragment>
+      
+   //    <NavBar/>
+   //    {/* <ResponsiveDrawer/> */}
+   //    {/* <Home/> */}
+   //    <GridImage/>
+   //    <Grid container direction="row">
+   //      <Grid item>
+   //         <Cards/>
+   //      </Grid>
+   //      <Grid item>
+   //         <Cards/>
+   //      </Grid>
+   //      <Grid item>
+   //         <Cards/>
+   //      </Grid>
+   //      <Grid item>
+   //         <Cards/>
+   //      </Grid>
+   //      <Grid item>
+   //         <Cards/>
+   //      </Grid>
+   //      <Grid item>
+   //         <Cards/>
+   //      </Grid>
+   //      <Grid item>
+   //         <Cards/>
+   //      </Grid>
+   //      <Grid item>
+   //         <Cards/>
+   //      </Grid>
+   //    </Grid>
+   //    {/* <LongMenu/> */}
+   //  </React.Fragment>
+            <Provider store={store}>        
+               <Home />      
+            </Provider>   
+    );
+  }
 }
 
 export default App;
